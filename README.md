@@ -4,6 +4,8 @@ A field guide for advertising students: from chatting with AI to directing agent
 
 This repository is the finished static site. There is no build step.
 
+Mac and Windows are both covered. A switch at the top of every page changes the steps to match, and the choice is remembered. Link straight to one version with `?os=win` or `?os=mac`.
+
 - `index.html` is the hub. `module-01.html` to `module-21.html` are the lessons.
 - `kit.html` and `downloads/harness-starter-kit.zip` are the starter files.
 - `cards.html` holds the tool cards.

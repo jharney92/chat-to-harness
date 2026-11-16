@@ -9,8 +9,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap">
+<script>(function(){var o=null;try{var q=new URLSearchParams(location.search).get('os');if(q==='win'||q==='mac'){o=q;localStorage.setItem('os',o)}else{o=localStorage.getItem('os')}}catch(e){}if(o!=='win'&&o!=='mac')o=/Windows/i.test(navigator.userAgent)?'win':'mac';document.documentElement.setAttribute('data-os',o)})()</script>
 <style>
 html{-webkit-text-size-adjust:100%}
+html[data-os=mac] [data-os=win],html[data-os=win] [data-os=mac]{display:none !important}
+.os{display:inline-flex;border:1px solid #2A2522;border-radius:8px;overflow:hidden;align-self:center}
+.os button{font:700 13px Arial,sans-serif;letter-spacing:.04em;padding:10px 14px;border:0;background:#FFFFFF;color:#2A2522;cursor:pointer}
+html[data-os=mac] .os [data-set=mac],html[data-os=win] .os [data-set=win]{background:#2A2522;color:#FFFFFF}
 body{margin:0;background:#FFFFFF}
 a{color:#C8102E}a:hover{color:#7C2529}
 video{display:block;width:100%;height:auto;border-radius:10px;background:#2A2522}
@@ -24,7 +29,7 @@ video{display:block;width:100%;height:auto;border-radius:10px;background:#2A2522
 <div style="border-bottom: 4px solid #F1BE48">
 <div style="max-width: 1040px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between">
 <a href="index.html" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #2A2522; padding: 12px 0">From Chat to Harness</a>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px"><span class="os" role="group" aria-label="Your computer"><button type="button" data-set="mac">Mac</button><button type="button" data-set="win">Windows</button></span>
 <a href="module-10.html" style="padding: 12px 0">Previous: Neon and SQL</a>
 <a href="index.html" style="padding: 12px 0">All modules</a>
 <a href="module-12.html" style="padding: 12px 0">Next: Inngest</a>
@@ -91,5 +96,6 @@ video{display:block;width:100%;height:auto;border-radius:10px;background:#2A2522
 
 </div>
 
+<script>document.querySelectorAll('.os button').forEach(function(b){b.setAttribute('aria-pressed',String(document.documentElement.getAttribute('data-os')===b.getAttribute('data-set')));b.addEventListener('click',function(){var o=b.getAttribute('data-set');document.documentElement.setAttribute('data-os',o);try{localStorage.setItem('os',o)}catch(e){}document.querySelectorAll('.os button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))})})})</script>
 </body>
 </html>

@@ -9,8 +9,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap">
+<script>(function(){var o=null;try{var q=new URLSearchParams(location.search).get('os');if(q==='win'||q==='mac'){o=q;localStorage.setItem('os',o)}else{o=localStorage.getItem('os')}}catch(e){}if(o!=='win'&&o!=='mac')o=/Windows/i.test(navigator.userAgent)?'win':'mac';document.documentElement.setAttribute('data-os',o)})()</script>
 <style>
 html{-webkit-text-size-adjust:100%}
+html[data-os=mac] [data-os=win],html[data-os=win] [data-os=mac]{display:none !important}
+.os{display:inline-flex;border:1px solid #2A2522;border-radius:8px;overflow:hidden;align-self:center}
+.os button{font:700 13px Arial,sans-serif;letter-spacing:.04em;padding:10px 14px;border:0;background:#FFFFFF;color:#2A2522;cursor:pointer}
+html[data-os=mac] .os [data-set=mac],html[data-os=win] .os [data-set=win]{background:#2A2522;color:#FFFFFF}
 body{margin:0;background:#FFFFFF}
 a{color:#C8102E}a:hover{color:#7C2529}
 video{display:block;width:100%;height:auto;border-radius:10px;background:#2A2522}
@@ -85,13 +90,13 @@ video{display:block;width:100%;height:auto;border-radius:10px;background:#2A2522
 <h2>What gets set up</h2>
 <div class="cards c4">
 <div class="card"><p class="k">MODULE 3</p><h3>Claude account</h3><p class="t">A Pro plan. The free plan does not include Claude Code.</p></div>
-<div class="card"><p class="k">MODULE 4</p><h3>A terminal</h3><p class="t">Homebrew and Ghostty. Fifteen commands.</p></div>
+<div class="card"><p class="k">MODULE 4</p><h3>A terminal</h3><p class="t">Ghostty on Mac, Windows Terminal on Windows. Fifteen commands.</p></div>
 <div class="card"><p class="k">MODULE 5</p><h3>Git and GitHub</h3><p class="t">A save button and an undo button.</p></div>
 <div class="card"><p class="k">MODULE 6</p><h3>Claude Code</h3><p class="t">The agent itself, and a first small build.</p></div>
 </div>
 </div>
 </section>
-</div><div class="notes"><span style="font-weight: 700">Notes: </span>Mac first. A Windows version of the guide is planned.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 4 of 12</div><div class="sw"><section id="s04" class="alt" data-transition="fade">
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Mac and Windows are both covered. Students pick their system at the top of any page, and the steps change to match.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 4 of 12</div><div class="sw"><section id="s04" class="alt" data-transition="fade">
 <div class="bar"></div>
 <div class="stack">
 <h2>Three places Claude lives</h2>
@@ -115,7 +120,7 @@ video{display:block;width:100%;height:auto;border-radius:10px;background:#2A2522
 </div>
 </div>
 </section>
-</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 4. Most beginner errors are being in a different folder than you thought. Teach pwd as the reflex.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 6 of 12</div><div class="sw"><section id="s06" data-transition="fade">
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 4. Most beginner errors are being in a different folder than you thought. Teach pwd as the reflex. This is the Mac prompt. Windows shows PS, then the folder, then a &gt; sign.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 6 of 12</div><div class="sw"><section id="s06" data-transition="fade">
 <div class="bar"></div>
 <div class="stack">
 <h2>Six commands used constantly</h2>
@@ -125,7 +130,7 @@ video{display:block;width:100%;height:auto;border-radius:10px;background:#2A2522
 <tr><td>ls</td><td>Lists what is in the current folder.</td></tr>
 <tr><td>cd</td><td>Moves into a folder. Two dots moves up one level.</td></tr>
 <tr><td>mkdir</td><td>Makes a new folder.</td></tr>
-<tr><td>open</td><td>Opens a file or folder the normal Mac way.</td></tr>
+<tr><td>open</td><td>Opens a file or folder the normal way. On Windows the command is start.</td></tr>
 <tr><td>rm</td><td>Deletes a file. There is no Trash and no undo.</td></tr>
 </table>
 </div>
@@ -203,6 +208,7 @@ video{display:block;width:100%;height:auto;border-radius:10px;background:#2A2522
 </div>
 </div>
 </section>
-</div><div class="notes"><span style="font-weight: 700">Notes: </span>Common blockers: command not found after install (open a new terminal window), being in the wrong folder (pwd), and the skipped Homebrew Next steps.</div></div></div></div><script>function fit(){document.querySelectorAll('.sw').forEach(function(w){w.firstElementChild.style.transform='scale('+w.clientWidth/1920+')'})}addEventListener('resize',fit);addEventListener('load',fit);fit()</script>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Common blockers: command not found after install (open a new terminal window), being in the wrong folder (pwd), and, on a Mac, the skipped Homebrew Next steps.</div></div></div></div><script>function fit(){document.querySelectorAll('.sw').forEach(function(w){w.firstElementChild.style.transform='scale('+w.clientWidth/1920+')'})}addEventListener('resize',fit);addEventListener('load',fit);fit()</script>
+<script>document.querySelectorAll('.os button').forEach(function(b){b.setAttribute('aria-pressed',String(document.documentElement.getAttribute('data-os')===b.getAttribute('data-set')));b.addEventListener('click',function(){var o=b.getAttribute('data-set');document.documentElement.setAttribute('data-os',o);try{localStorage.setItem('os',o)}catch(e){}document.querySelectorAll('.os button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))})})})</script>
 </body>
 </html>
