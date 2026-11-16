@@ -1,0 +1,49 @@
+WEBVTT
+
+1
+00:00:00.200 --> 00:00:04.177
+One small feature: add tags to ideas. Watch who touches it.
+
+2
+00:00:04.607 --> 00:00:06.098
+The planner goes first.
+
+3
+00:00:06.128 --> 00:00:12.514
+It reads the project and writes a plan: what changes, which files, and how you'll know it worked.
+
+4
+00:00:12.544 --> 00:00:13.705
+It writes no code.
+
+5
+00:00:14.135 --> 00:00:18.241
+The builder takes the plan and makes the smallest change that satisfies it.
+
+6
+00:00:18.271 --> 00:00:19.565
+Then it runs every test.
+
+7
+00:00:19.995 --> 00:00:22.528
+The reviewer never saw it being built.
+
+8
+00:00:22.558 --> 00:00:27.048
+It reads the change cold, and answers with one word. Merge, or fix.
+
+9
+00:00:27.478 --> 00:00:34.441
+If something breaks along the way, the debugger gathers evidence, names the cause, and cleans up after itself.
+
+10
+00:00:34.871 --> 00:00:38.931
+Last, the writer updates the runbook to match what now exists.
+
+11
+00:00:39.361 --> 00:00:43.168
+Five roles, each with a clean desk and one job. And you?
+
+12
+00:00:43.198 --> 00:00:46.457
+You approved the plan, and you tried the result.

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phase 4 slides: The harness | From Chat to Harness</title>
+<meta name="description" content="Slides and speaker notes for teaching Phase 4, The harness.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23C8102E'/%3E%3Crect y='26' width='32' height='6' fill='%23F1BE48'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#FFFFFF}
+a{color:#C8102E}a:hover{color:#7C2529}
+video{display:block;width:100%;height:auto;border-radius:10px;background:#2A2522}
+</style>
+<style>.sw section{ padding:128px; background:#FBFAF7; color:#2A2522; font-family:Arial, sans-serif; }
+.sw .bar{ position:absolute; left:0; top:0; width:1920px; height:16px; background:#F1BE48; }
+.sw .stack{ display:flex; flex-direction:column; gap:48px; height:824px; }
+.sw .eyebrow{ font-size:24px; font-weight:700; letter-spacing:3px; color:#C8102E; }
+.sw h1{ font-family:'Merriweather', Georgia, serif; font-size:104px; font-weight:700; line-height:1.12; color:#2A2522; }
+.sw h2{ font-family:'Merriweather', Georgia, serif; font-size:64px; font-weight:700; line-height:1.18; color:#2A2522; }
+.sw .lede{ font-size:36px; line-height:1.35; color:#4A423C; }
+.sw .cards{ display:flex; gap:28px; }
+.sw .card{ flex:1; background:#FFFFFF; border:2px solid #D9D5CF; border-radius:16px; padding:32px; display:flex; flex-direction:column; gap:14px; }
+.sw .card .k{ font-size:24px; font-weight:700; letter-spacing:2px; color:#C8102E; }
+.sw .card h3{ font-family:Arial, sans-serif; font-size:32px; font-weight:700; line-height:1.2; color:#2A2522; }
+.sw .card .t{ font-size:28px; line-height:1.35; color:#4A423C; }
+.sw .c4 .card .t{ font-size:26px; }
+.sw .c5 .card{ padding:26px; }
+.sw .c5 .card h3{ font-size:28px; }
+.sw .c5 .card .t{ font-size:24px; }
+.sw .c6 .card{ padding:22px; }
+.sw .c6 .card h3{ font-size:28px; }
+.sw .c6 .card .t{ font-size:24px; }
+.sw .tbl{ font-family:Arial, sans-serif; font-size:28px; color:#2A2522; width:1664px; }
+.sw .tbl th{ color:#6E6259; text-align:left; }
+.sw .tbl td{ text-align:left; }
+.sw .cover{ background:#FBFAF7; }
+.sw .cover .stack{ justify-content:center; gap:40px; }
+.sw .cover .rule{ width:200px; height:12px; background:#F1BE48; border-radius:6px; }
+.sw .cover .sub{ font-size:44px; line-height:1.3; color:#4A423C; }
+.sw .cover .mods{ font-size:28px; color:#6E6259; }
+.sw .stmt{ background:#C8102E; }
+.sw .stmt .stack{ justify-content:center; gap:44px; }
+.sw .stmt h2{ font-size:88px; line-height:1.15; color:#FFFFFF; }
+.sw .stmt .lede{ color:#FFFFFF; font-size:40px; }
+.sw .alt{ background:#F4F2EE; }
+.sw .ask{ display:flex; flex-direction:column; gap:36px; }
+.sw .ask .row{ display:flex; gap:32px; align-items:flex-start; }
+.sw .ask .n{ font-family:'Merriweather', Georgia, serif; font-size:44px; font-weight:700; color:#C8102E; width:64px; }
+.sw .ask .q{ font-size:40px; line-height:1.3; color:#2A2522; flex:1; }
+.sw{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border:1px solid #D9D5CF;border-radius:10px;background:#FBFAF7}
+.sw section{position:absolute;left:0;top:0;width:1920px;height:1080px;box-sizing:border-box;transform-origin:0 0;overflow:hidden}
+.sw section *{margin:0;box-sizing:border-box}
+.sw .tbl{border-collapse:collapse}
+.sw .tbl th,.sw .tbl td{padding:15px 17px;border-bottom:2px solid #D9D5CF;vertical-align:top;line-height:1.3}
+.sw .tbl th{border-bottom-color:#2A2522}
+.notes{font-size:16px;color:#4A423C;border-left:4px solid #F1BE48;background:#F4F2EE;padding:12px 16px}
+@media print{.sw{break-inside:avoid}.nav{display:none}}
+</style>
+</head>
+<body>
+<div style="width: 100%; box-sizing: border-box; color: #2A2522; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 17px; line-height: 1.6"><div class="nav" style="border-bottom: 4px solid #F1BE48"><div style="max-width: 1040px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between"><a href="index.html" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #2A2522; padding: 12px 0">From Chat to Harness</a><div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px"><a href="deck-1.html" style="padding: 12px 0">Phase 1</a><a href="deck-2.html" style="padding: 12px 0">Phase 2</a><a href="deck-3.html" style="padding: 12px 0">Phase 3</a><a href="deck-4.html" style="padding: 12px 0; font-weight: 700">Phase 4</a><a href="deck-5.html" style="padding: 12px 0">Phase 5</a></div></div></div><div style="max-width: 1040px; margin: 0 auto; padding: 56px 32px 24px; display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">Slides for teaching Phase 4  ·  Modules 18 to 20</div><h1 style="margin: 0; font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: clamp(32px, 5vw, 52px); line-height: 1.15">The harness</h1><p style="margin: 0; color: #4A423C; max-width: 720px">Present from this page in full screen, or print it to PDF. Speaker notes sit under each slide.</p></div><div style="max-width: 1040px; margin: 0 auto; padding: 24px 32px 96px; display: flex; flex-direction: column; gap: 48px"><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 1 of 14</div><div class="sw"><section id="cover" class="cover" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<p class="eyebrow">FROM CHAT TO HARNESS</p>
+<h1>The harness</h1>
+<div class="rule"></div>
+<p class="sub">Turning one agent into a team that ships</p>
+<p class="mods">Phase 4  ·  Modules 18 to 20</p>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Covers Modules 18 to 20. The examples come from the author’s working setup, with private details removed.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 2 of 14</div><div class="sw"><section id="s02" class="stmt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>One assistant becomes a team.</h2>
+<p class="lede">A runbook, roles, review, and rules about what needs a yes.</p>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Students have used every tool. This phase is about stepping back safely so work continues while they do something else.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 3 of 14</div><div class="sw"><section id="s03" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Two runbooks</h2>
+<p class="lede">A plain text file the agent reads at the start of every session.</p>
+<div class="cards c2">
+<div class="card"><p class="k">GLOBAL</p><h3>About you</h3><p class="t">Who you are, how you want an agent to think, what it must never do anywhere.</p></div>
+<div class="card"><p class="k">PROJECT</p><h3>About this project</h3><p class="t">What it is, its commands, how it ships, and what looks wrong but is intentional.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 18. One file named AGENTS.md serves every agent tool. A one-line CLAUDE.md imports it. Every line costs attention, so the test is whether the agent would do worse without it.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 4 of 14</div><div class="sw"><section id="s04" class="alt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Three habits that make a runbook trustworthy</h2>
+<div class="cards c3">
+<div class="card"><p class="k">1</p><h3>Cite the source</h3><p class="t">Each line names the file it came from. A line with nothing to cite probably should not be there.</p></div>
+<div class="card"><p class="k">2</p><h3>Say what is intentional</h3><p class="t">Agents fix things. Mark anything that looks like a bug but is deliberate.</p></div>
+<div class="card"><p class="k">3</p><h3>Date your claims</h3><p class="t">Not “all tests pass.” The last recorded result, with its date.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 18. These come straight from the real runbooks. The second habit prevents an agent from helpfully repairing a design decision.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 5 of 14</div><div class="sw"><section id="s05" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Weak lines and strong lines</h2>
+<table class="tbl">
+<tr><th style="width:38%">Instead of</th><th style="width:62%">Write</th></tr>
+<tr><td>Write good, clean code.</td><td>Delete it. It changes nothing.</td></tr>
+<tr><td>Be careful with the database.</td><td>Never drop or rename a column without my yes.</td></tr>
+<tr><td>Make sure things work.</td><td>Run the tests before saying a change is done. State the result.</td></tr>
+<tr><td>Do not break production.</td><td>A push to main deploys. Work on a branch.</td></tr>
+</table>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 18. A strong line names an action and the condition that triggers it. If you cannot tell whether a rule was followed, it is too vague.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 6 of 14</div><div class="sw"><section id="s06" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Three ways to extend an agent</h2>
+<table class="tbl">
+<tr><th style="width:18%">Piece</th><th style="width:46%">What it is</th><th style="width:36%">Use it when</th></tr>
+<tr><td>Subagent</td><td>A specialist with its own instructions and a clean desk.</td><td>A job needs a different role.</td></tr>
+<tr><td>Skill</td><td>A written procedure, loaded only when needed.</td><td>You keep pasting the same instructions.</td></tr>
+<tr><td>Hook</td><td>A script that runs by itself at a set moment.</td><td>Something must always, or never, happen.</td></tr>
+</table>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 19. All three are plain text files. Students build a reviewer, a planner, a wrap-up skill and a guard hook.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 7 of 14</div><div class="sw"><section id="s07" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>The team</h2>
+<p class="lede">Five roles. Each is one file, with one job and a clean desk.</p>
+<div class="cards c5">
+<div class="card"><p class="k">PLANS</p><h3>architect</h3><p class="t">Writes the plan. No code.</p></div>
+<div class="card"><p class="k">BUILDS</p><h3>developer</h3><p class="t">Smallest change. Runs every test.</p></div>
+<div class="card"><p class="k">CHECKS</p><h3>reviewer</h3><p class="t">One word: merge or fix.</p></div>
+<div class="card"><p class="k">FINDS</p><h3>debugger</h3><p class="t">Evidence first. Cleans up.</p></div>
+<div class="card"><p class="k">WRITES</p><h3>writer</h3><p class="t">Documents what exists.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 19. The agent that built something is the worst one to judge it. A reviewer that never saw the work being made reads it fresh. Video 7.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 8 of 14</div><div class="sw"><section id="s08" class="stmt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>A runbook asks. A hook enforces.</h2>
+<p class="lede">If breaking a rule once would cost real money or data, it belongs in a hook.</p>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 19. The author’s guard hooks each record the date something went wrong. Every guardrail has a scar.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 9 of 14</div><div class="sw"><section id="s09" class="stmt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>You approve consequences, not code.</h2>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 20. This is the operating principle of the whole setup. Video 8.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 10 of 14</div><div class="sw"><section id="s10" class="alt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Four tiers</h2>
+<div class="cards c4">
+<div class="card"><p class="k">TIER 1</p><h3>Just do it</h3><p class="t">Tell me after. Reversible, reviewed, tested.</p></div>
+<div class="card"><p class="k">TIER 2</p><h3>Veto window</h3><p class="t">Doing this at 3:00 unless you say stop.</p></div>
+<div class="card"><p class="k">TIER 3</p><h3>A real gate</h3><p class="t">Money, real people, anything irreversible.</p></div>
+<div class="card"><p class="k">TIER 4</p><h3>Decide and flag</h3><p class="t">Everything else. Pick, ship, log it.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 20. Tier 4 is what makes it move. Without it the agent asks about everything and the student becomes the bottleneck.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 11 of 14</div><div class="sw"><section id="s11" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>The build pipeline</h2>
+<p class="lede">Every feature goes through the same six steps.</p>
+<div class="cards c6">
+<div class="card"><p class="k">1</p><h3>Scope</h3><p class="t">A plan.</p></div>
+<div class="card"><p class="k">2</p><h3>Build</h3><p class="t">In its own copy.</p></div>
+<div class="card"><p class="k">3</p><h3>Review</h3><p class="t">Once.</p></div>
+<div class="card"><p class="k">4</p><h3>Fix</h3><p class="t">Must-fix only.</p></div>
+<div class="card"><p class="k">5</p><h3>Merge</h3><p class="t">Undo written.</p></div>
+<div class="card"><p class="k">6</p><h3>Check live</h3><p class="t">Someone uses it.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 20. Two rules inside it: nothing is done until it has been exercised, and one review then ship. Merged is not finished.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 12 of 14</div><div class="sw"><section id="s12" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>What things cost, and why</h2>
+<p class="lede">Route models by the cost of a mistake. Put the cost guard on loops.</p>
+<div class="cards c3">
+<div class="card"><p class="k">1</p><h3>Short sessions</h3><p class="t">A long conversation rereads its whole history on every turn. End, hand off, start fresh.</p></div>
+<div class="card"><p class="k">2</p><h3>Verify elsewhere</h3><p class="t">Test runs and log reading go to a subagent that returns a verdict.</p></div>
+<div class="card"><p class="k">3</p><h3>Spend where it hurts</h3><p class="t">Fast model for reading. Strongest for planning and risky reviews.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 20. The author measured it: the expensive thing was one long session, not the choice of model.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 13 of 14</div><div class="sw"><section id="s13" class="stmt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Finish, don’t fill.</h2>
+<p class="lede">Told to stay busy, agents build infrastructure. Measure finished outcomes, never usage.</p>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 20. The most valuable lesson from running this unattended. It looks like progress and is not.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 14 of 14</div><div class="sw"><section id="s14" class="alt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>In class</h2>
+<div class="ask">
+<div class="row"><p class="n">1</p><p class="q">Sort ten actions from your project into the four tiers. Which were hard to place?</p></div>
+<div class="row"><p class="n">2</p><p class="q">Take one feature from plan to live. Count how many decisions were yours.</p></div>
+<div class="row"><p class="n">3</p><p class="q">Read a classmate’s runbook. Which line could you not check was followed?</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>The second prompt usually yields three: approve the plan, test the preview, say merge. That is the job.</div></div></div></div><script>function fit(){document.querySelectorAll('.sw').forEach(function(w){w.firstElementChild.style.transform='scale('+w.clientWidth/1920+')'})}addEventListener('resize',fit);addEventListener('load',fit);fit()</script>
+</body>
+</html>

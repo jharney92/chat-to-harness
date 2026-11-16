@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phase 5 slides: Capstone | From Chat to Harness</title>
+<meta name="description" content="Slides and speaker notes for teaching Phase 5, Capstone.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23C8102E'/%3E%3Crect y='26' width='32' height='6' fill='%23F1BE48'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#FFFFFF}
+a{color:#C8102E}a:hover{color:#7C2529}
+video{display:block;width:100%;height:auto;border-radius:10px;background:#2A2522}
+</style>
+<style>.sw section{ padding:128px; background:#FBFAF7; color:#2A2522; font-family:Arial, sans-serif; }
+.sw .bar{ position:absolute; left:0; top:0; width:1920px; height:16px; background:#F1BE48; }
+.sw .stack{ display:flex; flex-direction:column; gap:48px; height:824px; }
+.sw .eyebrow{ font-size:24px; font-weight:700; letter-spacing:3px; color:#C8102E; }
+.sw h1{ font-family:'Merriweather', Georgia, serif; font-size:104px; font-weight:700; line-height:1.12; color:#2A2522; }
+.sw h2{ font-family:'Merriweather', Georgia, serif; font-size:64px; font-weight:700; line-height:1.18; color:#2A2522; }
+.sw .lede{ font-size:36px; line-height:1.35; color:#4A423C; }
+.sw .cards{ display:flex; gap:28px; }
+.sw .card{ flex:1; background:#FFFFFF; border:2px solid #D9D5CF; border-radius:16px; padding:32px; display:flex; flex-direction:column; gap:14px; }
+.sw .card .k{ font-size:24px; font-weight:700; letter-spacing:2px; color:#C8102E; }
+.sw .card h3{ font-family:Arial, sans-serif; font-size:32px; font-weight:700; line-height:1.2; color:#2A2522; }
+.sw .card .t{ font-size:28px; line-height:1.35; color:#4A423C; }
+.sw .c4 .card .t{ font-size:26px; }
+.sw .c5 .card{ padding:26px; }
+.sw .c5 .card h3{ font-size:28px; }
+.sw .c5 .card .t{ font-size:24px; }
+.sw .c6 .card{ padding:22px; }
+.sw .c6 .card h3{ font-size:28px; }
+.sw .c6 .card .t{ font-size:24px; }
+.sw .tbl{ font-family:Arial, sans-serif; font-size:28px; color:#2A2522; width:1664px; }
+.sw .tbl th{ color:#6E6259; text-align:left; }
+.sw .tbl td{ text-align:left; }
+.sw .cover{ background:#FBFAF7; }
+.sw .cover .stack{ justify-content:center; gap:40px; }
+.sw .cover .rule{ width:200px; height:12px; background:#F1BE48; border-radius:6px; }
+.sw .cover .sub{ font-size:44px; line-height:1.3; color:#4A423C; }
+.sw .cover .mods{ font-size:28px; color:#6E6259; }
+.sw .stmt{ background:#C8102E; }
+.sw .stmt .stack{ justify-content:center; gap:44px; }
+.sw .stmt h2{ font-size:88px; line-height:1.15; color:#FFFFFF; }
+.sw .stmt .lede{ color:#FFFFFF; font-size:40px; }
+.sw .alt{ background:#F4F2EE; }
+.sw .ask{ display:flex; flex-direction:column; gap:36px; }
+.sw .ask .row{ display:flex; gap:32px; align-items:flex-start; }
+.sw .ask .n{ font-family:'Merriweather', Georgia, serif; font-size:44px; font-weight:700; color:#C8102E; width:64px; }
+.sw .ask .q{ font-size:40px; line-height:1.3; color:#2A2522; flex:1; }
+.sw{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border:1px solid #D9D5CF;border-radius:10px;background:#FBFAF7}
+.sw section{position:absolute;left:0;top:0;width:1920px;height:1080px;box-sizing:border-box;transform-origin:0 0;overflow:hidden}
+.sw section *{margin:0;box-sizing:border-box}
+.sw .tbl{border-collapse:collapse}
+.sw .tbl th,.sw .tbl td{padding:15px 17px;border-bottom:2px solid #D9D5CF;vertical-align:top;line-height:1.3}
+.sw .tbl th{border-bottom-color:#2A2522}
+.notes{font-size:16px;color:#4A423C;border-left:4px solid #F1BE48;background:#F4F2EE;padding:12px 16px}
+@media print{.sw{break-inside:avoid}.nav{display:none}}
+</style>
+</head>
+<body>
+<div style="width: 100%; box-sizing: border-box; color: #2A2522; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 17px; line-height: 1.6"><div class="nav" style="border-bottom: 4px solid #F1BE48"><div style="max-width: 1040px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between"><a href="index.html" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #2A2522; padding: 12px 0">From Chat to Harness</a><div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px"><a href="deck-1.html" style="padding: 12px 0">Phase 1</a><a href="deck-2.html" style="padding: 12px 0">Phase 2</a><a href="deck-3.html" style="padding: 12px 0">Phase 3</a><a href="deck-4.html" style="padding: 12px 0">Phase 4</a><a href="deck-5.html" style="padding: 12px 0; font-weight: 700">Phase 5</a></div></div></div><div style="max-width: 1040px; margin: 0 auto; padding: 56px 32px 24px; display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">Slides for teaching Phase 5  ·  Module 21</div><h1 style="margin: 0; font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: clamp(32px, 5vw, 52px); line-height: 1.15">Capstone</h1><p style="margin: 0; color: #4A423C; max-width: 720px">Present from this page in full screen, or print it to PDF. Speaker notes sit under each slide.</p></div><div style="max-width: 1040px; margin: 0 auto; padding: 24px 32px 96px; display: flex; flex-direction: column; gap: 48px"><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 1 of 8</div><div class="sw"><section id="cover" class="cover" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<p class="eyebrow">FROM CHAT TO HARNESS</p>
+<h1>Capstone</h1>
+<div class="rule"></div>
+<p class="sub">Build one real thing, end to end</p>
+<p class="mods">Phase 5  ·  Module 21</p>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Covers Module 21. Use this deck to launch the capstone and again at the end to frame assessment.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 2 of 8</div><div class="sw"><section id="s02" class="stmt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>A small tool that is finished beats a platform that is not.</h2>
+<p class="lede">One real tool, for a real person, live on the internet.</p>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Students tend to scope too large. Two weeks of evenings, six pieces of work at most.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 3 of 8</div><div class="sw"><section id="s03" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Four ideas, if a student needs one</h2>
+<div class="cards c4">
+<div class="card"><p class="k">1</p><h3>Brief builder</h3><p class="t">Intake answers in. A structured first-draft brief out.</p></div>
+<div class="card"><p class="k">2</p><h3>Performance digest</h3><p class="t">Upload the weekly export. Read what changed.</p></div>
+<div class="card"><p class="k">3</p><h3>Competitor watch</h3><p class="t">Watch public pages. Hear only when one changes.</p></div>
+<div class="card"><p class="k">4</p><h3>Pitch board</h3><p class="t">Type an idea. Get taglines and concept images.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Better still is the task each student wrote down in Phase 1. The third idea reads other people’s sites: public pages only, and check each site’s terms.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 4 of 8</div><div class="sw"><section id="s04" class="alt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>What it must have</h2>
+<div class="cards c3">
+<div class="card"><p class="k">THE PRODUCT</p><h3>It works, and it is safe</h3><p class="t">Live. Sign-in. Private data per user. A job that reports failure. No secrets in the repository.</p></div>
+<div class="card"><p class="k">THE HARNESS</p><h3>Agents can work on it</h3><p class="t">A cited runbook with gates. A planner and reviewer that were used. A skill and a hook.</p></div>
+<div class="card"><p class="k">THE PROCESS</p><h3>The student directed it</h3><p class="t">A scope, a plan with I can lines, one feature through the full pipeline, an undo written before each merge.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>This is the checklist students work to and the one you can assess against.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 5 of 8</div><div class="sw"><section id="s05" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Seven stages</h2>
+<table class="tbl">
+<tr><th style="width:28%">Stage</th><th style="width:72%">What comes out</th></tr>
+<tr><td>1. Define done</td><td>Three to five sentences starting with “I can…”</td></tr>
+<tr><td>2. Scope</td><td>A short document: in, out, constraints, risks.</td></tr>
+<tr><td>3. Plan</td><td>Separate pieces of work, each with its own acceptance lines.</td></tr>
+<tr><td>4. Harness first</td><td>Runbook, agents and gates in place before any code.</td></tr>
+<tr><td>5. Live on day one</td><td>The smallest deployable thing, deployed.</td></tr>
+<tr><td>6. Build</td><td>One piece at a time, each through the pipeline.</td></tr>
+<tr><td>7. Harden</td><td>Two-account test, a forced failure, a secrets scan, a stranger.</td></tr>
+</table>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Stage 5 matters most. Deploying something nearly empty on day one surfaces every account and key problem while the app is too small for anything else to be wrong.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 6 of 8</div><div class="sw"><section id="s06" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>What students hand in</h2>
+<table class="tbl">
+<tr><th style="width:38%">Item</th><th style="width:62%">What it shows</th></tr>
+<tr><td>Live address and a test account</td><td>It works.</td></tr>
+<tr><td>Access to the repository</td><td>How it was built, including the runbook’s history.</td></tr>
+<tr><td>Decision log</td><td>The calls the agents made, and that the student knew.</td></tr>
+<tr><td>Two-minute demo</td><td>Each I can line, done on screen.</td></tr>
+<tr><td>One-page retrospective</td><td>What went wrong, and which rule each mistake produced.</td></tr>
+</table>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>The retrospective is the part to weight. Anyone can end up with a working app. Explaining why each runbook rule exists shows the student was directing.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 7 of 8</div><div class="sw"><section id="s07" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>One way to assess it</h2>
+<table class="tbl">
+<tr><th style="width:34%">Question</th><th style="width:66%">Evidence</th></tr>
+<tr><td>Does it work?</td><td>Every I can line passes, done by someone other than the builder.</td></tr>
+<tr><td>Is it safe?</td><td>No cross-user data, no secrets in history, a clear list of gates.</td></tr>
+<tr><td>Could someone else pick it up?</td><td>A fresh agent session can state the rules and resume from the notes.</td></tr>
+<tr><td>Did the student direct it?</td><td>Scope was cut on purpose. Decisions are logged. Rules trace to mistakes.</td></tr>
+</table>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Weights are yours to set. All four can be answered from what is handed in.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 8 of 8</div><div class="sw"><section id="s08" class="stmt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Say what done looks like. Decide what needs your yes. Check the result yourself.</h2>
+<p class="lede">The tools will change. That part stays.</p>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Closing slide. Several tools named in the guide will be replaced within a couple of years. These three habits will not.</div></div></div></div><script>function fit(){document.querySelectorAll('.sw').forEach(function(w){w.firstElementChild.style.transform='scale('+w.clientWidth/1920+')'})}addEventListener('resize',fit);addEventListener('load',fit);fit()</script>
+</body>
+</html>

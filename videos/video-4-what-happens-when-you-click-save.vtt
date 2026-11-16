@@ -1,0 +1,53 @@
+WEBVTT
+
+1
+00:00:00.200 --> 00:00:04.296
+You type an idea and click Save. It shows up in your list.
+
+2
+00:00:04.326 --> 00:00:07.497
+It feels instant. Three things just happened.
+
+3
+00:00:07.927 --> 00:00:11.004
+First, your browser sends the idea to your app.
+
+4
+00:00:11.034 --> 00:00:12.921
+The app isn't on your laptop.
+
+5
+00:00:12.951 --> 00:00:15.631
+It's running on a server, somewhere else.
+
+6
+00:00:16.061 --> 00:00:20.295
+The app checks the request. Is there actually a title?
+
+7
+00:00:20.325 --> 00:00:24.716
+Is it a sensible length? If not, it says no, right here.
+
+8
+00:00:25.146 --> 00:00:29.643
+Second, the app writes one line of SQL and hands it to the database.
+
+9
+00:00:29.673 --> 00:00:30.775
+Insert this idea.
+
+10
+00:00:31.205 --> 00:00:36.180
+The database stores it as a new row in a table, and answers: done.
+
+11
+00:00:36.610 --> 00:00:41.117
+Third, the app sends the updated list back to your browser, and the page redraws.
+
+12
+00:00:41.547 --> 00:00:43.687
+Browser. App. Database. And back.
+
+13
+00:00:43.717 --> 00:00:48.028
+Almost everything you'll build is some version of that round trip.

@@ -1,0 +1,65 @@
+WEBVTT
+
+1
+00:00:00.250 --> 00:00:04.680
+You hand an agent your project. In one minute, it changes twenty files.
+
+2
+00:00:04.680 --> 00:00:08.985
+Most of the time, that's exactly what you wanted. Sometimes it isn't.
+
+3
+00:00:09.485 --> 00:00:15.365
+Git is how you get back. It keeps your project's history as a series of save points.
+
+4
+00:00:15.365 --> 00:00:17.325
+Each one is called a commit.
+
+5
+00:00:17.825 --> 00:00:21.258
+Monday. First version of the page. Save.
+
+6
+00:00:21.258 --> 00:00:24.176
+Tuesday. Add a contact form. Save.
+
+7
+00:00:24.176 --> 00:00:27.523
+Tuesday night. Change the colors. Save.
+
+8
+00:00:28.023 --> 00:00:31.856
+Wednesday, you ask the agent to rework the layout. It does.
+
+9
+00:00:31.856 --> 00:00:32.831
+And it's worse.
+
+10
+00:00:33.331 --> 00:00:37.427
+No problem. You step back to Tuesday night's save point.
+
+11
+00:00:37.427 --> 00:00:41.012
+Everything is exactly as it was. Nothing is lost.
+
+12
+00:00:41.512 --> 00:00:44.478
+GitHub keeps a copy of that whole history online.
+
+13
+00:00:44.478 --> 00:00:48.231
+It's your backup, and it's where your app gets published from.
+
+14
+00:00:48.731 --> 00:00:54.301
+So the habit is simple. Save before the agent does anything big.
+
+15
+00:00:54.301 --> 00:00:56.737
+Like the result? Save again.
+
+16
+00:00:56.737 --> 00:00:58.043
+Don't? Go back.

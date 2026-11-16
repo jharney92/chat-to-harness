@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phase 3 slides: The stack | From Chat to Harness</title>
+<meta name="description" content="Slides and speaker notes for teaching Phase 3, The stack.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23C8102E'/%3E%3Crect y='26' width='32' height='6' fill='%23F1BE48'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#FFFFFF}
+a{color:#C8102E}a:hover{color:#7C2529}
+video{display:block;width:100%;height:auto;border-radius:10px;background:#2A2522}
+</style>
+<style>.sw section{ padding:128px; background:#FBFAF7; color:#2A2522; font-family:Arial, sans-serif; }
+.sw .bar{ position:absolute; left:0; top:0; width:1920px; height:16px; background:#F1BE48; }
+.sw .stack{ display:flex; flex-direction:column; gap:48px; height:824px; }
+.sw .eyebrow{ font-size:24px; font-weight:700; letter-spacing:3px; color:#C8102E; }
+.sw h1{ font-family:'Merriweather', Georgia, serif; font-size:104px; font-weight:700; line-height:1.12; color:#2A2522; }
+.sw h2{ font-family:'Merriweather', Georgia, serif; font-size:64px; font-weight:700; line-height:1.18; color:#2A2522; }
+.sw .lede{ font-size:36px; line-height:1.35; color:#4A423C; }
+.sw .cards{ display:flex; gap:28px; }
+.sw .card{ flex:1; background:#FFFFFF; border:2px solid #D9D5CF; border-radius:16px; padding:32px; display:flex; flex-direction:column; gap:14px; }
+.sw .card .k{ font-size:24px; font-weight:700; letter-spacing:2px; color:#C8102E; }
+.sw .card h3{ font-family:Arial, sans-serif; font-size:32px; font-weight:700; line-height:1.2; color:#2A2522; }
+.sw .card .t{ font-size:28px; line-height:1.35; color:#4A423C; }
+.sw .c4 .card .t{ font-size:26px; }
+.sw .c5 .card{ padding:26px; }
+.sw .c5 .card h3{ font-size:28px; }
+.sw .c5 .card .t{ font-size:24px; }
+.sw .c6 .card{ padding:22px; }
+.sw .c6 .card h3{ font-size:28px; }
+.sw .c6 .card .t{ font-size:24px; }
+.sw .tbl{ font-family:Arial, sans-serif; font-size:28px; color:#2A2522; width:1664px; }
+.sw .tbl th{ color:#6E6259; text-align:left; }
+.sw .tbl td{ text-align:left; }
+.sw .cover{ background:#FBFAF7; }
+.sw .cover .stack{ justify-content:center; gap:40px; }
+.sw .cover .rule{ width:200px; height:12px; background:#F1BE48; border-radius:6px; }
+.sw .cover .sub{ font-size:44px; line-height:1.3; color:#4A423C; }
+.sw .cover .mods{ font-size:28px; color:#6E6259; }
+.sw .stmt{ background:#C8102E; }
+.sw .stmt .stack{ justify-content:center; gap:44px; }
+.sw .stmt h2{ font-size:88px; line-height:1.15; color:#FFFFFF; }
+.sw .stmt .lede{ color:#FFFFFF; font-size:40px; }
+.sw .alt{ background:#F4F2EE; }
+.sw .ask{ display:flex; flex-direction:column; gap:36px; }
+.sw .ask .row{ display:flex; gap:32px; align-items:flex-start; }
+.sw .ask .n{ font-family:'Merriweather', Georgia, serif; font-size:44px; font-weight:700; color:#C8102E; width:64px; }
+.sw .ask .q{ font-size:40px; line-height:1.3; color:#2A2522; flex:1; }
+.sw{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border:1px solid #D9D5CF;border-radius:10px;background:#FBFAF7}
+.sw section{position:absolute;left:0;top:0;width:1920px;height:1080px;box-sizing:border-box;transform-origin:0 0;overflow:hidden}
+.sw section *{margin:0;box-sizing:border-box}
+.sw .tbl{border-collapse:collapse}
+.sw .tbl th,.sw .tbl td{padding:15px 17px;border-bottom:2px solid #D9D5CF;vertical-align:top;line-height:1.3}
+.sw .tbl th{border-bottom-color:#2A2522}
+.notes{font-size:16px;color:#4A423C;border-left:4px solid #F1BE48;background:#F4F2EE;padding:12px 16px}
+@media print{.sw{break-inside:avoid}.nav{display:none}}
+</style>
+</head>
+<body>
+<div style="width: 100%; box-sizing: border-box; color: #2A2522; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 17px; line-height: 1.6"><div class="nav" style="border-bottom: 4px solid #F1BE48"><div style="max-width: 1040px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between"><a href="index.html" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #2A2522; padding: 12px 0">From Chat to Harness</a><div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px"><a href="deck-1.html" style="padding: 12px 0">Phase 1</a><a href="deck-2.html" style="padding: 12px 0">Phase 2</a><a href="deck-3.html" style="padding: 12px 0; font-weight: 700">Phase 3</a><a href="deck-4.html" style="padding: 12px 0">Phase 4</a><a href="deck-5.html" style="padding: 12px 0">Phase 5</a></div></div></div><div style="max-width: 1040px; margin: 0 auto; padding: 56px 32px 24px; display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">Slides for teaching Phase 3  ·  Modules 7 to 17</div><h1 style="margin: 0; font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: clamp(32px, 5vw, 52px); line-height: 1.15">The stack</h1><p style="margin: 0; color: #4A423C; max-width: 720px">Present from this page in full screen, or print it to PDF. Speaker notes sit under each slide.</p></div><div style="max-width: 1040px; margin: 0 auto; padding: 24px 32px 96px; display: flex; flex-direction: column; gap: 48px"><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 1 of 14</div><div class="sw"><section id="cover" class="cover" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<p class="eyebrow">FROM CHAT TO HARNESS</p>
+<h1>The stack</h1>
+<div class="rule"></div>
+<p class="sub">What each tool is, and how they connect</p>
+<p class="mods">Phase 3  ·  Modules 7 to 17</p>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Covers Modules 7 to 17. Too much for one class. Slides 2 to 9 are the core web path (Modules 7 to 12). Slides 10 to 14 are tools, AI and local apps (13 to 17).</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 2 of 14</div><div class="sw"><section id="s02" class="stmt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>One app. One new layer per module.</h2>
+<p class="lede">Students direct the agent to do the wiring, and learn what to check.</p>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>The app is called Campaign Notes. Students never start over. Each module adds to the same project.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 3 of 14</div><div class="sw"><section id="s03" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Campaign Notes grows</h2>
+<div class="cards c6">
+<div class="card"><p class="k">7</p><h3>A page</h3><p class="t">Next.js and Tailwind.</p></div>
+<div class="card"><p class="k">8</p><h3>Live</h3><p class="t">Vercel.</p></div>
+<div class="card"><p class="k">9</p><h3>Secrets</h3><p class="t">Keys and where they go.</p></div>
+<div class="card"><p class="k">10</p><h3>A database</h3><p class="t">Neon and SQL.</p></div>
+<div class="card"><p class="k">11</p><h3>Sign-in</h3><p class="t">Clerk.</p></div>
+<div class="card"><p class="k">12</p><h3>Jobs</h3><p class="t">Inngest.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Modules 7 to 12. By Module 12 it is a real application: an address, a database, private data per user, and a job that runs without anyone clicking.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 4 of 14</div><div class="sw"><section id="s04" class="alt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>How work reaches the internet</h2>
+<p class="lede">Connect once. After that, publishing is something that happens when you push.</p>
+<div class="cards c4">
+<div class="card"><p class="k">1</p><h3>Your laptop</h3><p class="t">You and the agent change files and commit.</p></div>
+<div class="card"><p class="k">2</p><h3>GitHub</h3><p class="t">You push. The repository has the new commit.</p></div>
+<div class="card"><p class="k">3</p><h3>Vercel</h3><p class="t">It notices, builds the app, and checks it starts.</p></div>
+<div class="card"><p class="k">4</p><h3>The internet</h3><p class="t">The new version replaces the old one.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 8. The rule that surprises people: once connected, a push to main IS the deploy. Work in progress goes on a branch, which gets its own preview address.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 5 of 14</div><div class="sw"><section id="s05" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Secrets: names in code, values somewhere else</h2>
+<p class="lede">A leaked key is the most common serious beginner mistake. It takes seconds.</p>
+<div class="cards c2">
+<div class="card"><p class="k">SAFE TO SHARE</p><h3>The name</h3><p class="t">DATABASE_URL appears in code and on GitHub. It says which secret is needed, not what it is.</p></div>
+<div class="card"><p class="k">NEVER SHARED</p><h3>The value</h3><p class="t">Lives in a local file Git ignores, and in the host’s settings. Not in code, not in Git, not in a chat.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 9. Taught before the database on purpose. Students practice with a harmless value and watch the live site go blank until they add it to the host.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 6 of 14</div><div class="sw"><section id="s06" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Enough SQL to read a query</h2>
+<p class="lede">A database is a spreadsheet the app can read and write.</p>
+<table class="tbl">
+<tr><th style="width:26%">Statement</th><th style="width:74%">What it does</th></tr>
+<tr><td>SELECT</td><td>Read rows.</td></tr>
+<tr><td>WHERE</td><td>Choose which rows.</td></tr>
+<tr><td>INSERT</td><td>Add a row.</td></tr>
+<tr><td>UPDATE</td><td>Change rows. Without WHERE, every row.</td></tr>
+<tr><td>DELETE</td><td>Remove rows. Without WHERE, every row.</td></tr>
+</table>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 10. The agent writes SQL. The student must recognize what a statement will do before approving it. Find the WHERE.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 7 of 14</div><div class="sw"><section id="s07" class="stmt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Sign-in proves who someone is. Only your queries decide what they see.</h2>
+<p class="lede">The test: a second account must see an empty list.</p>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 11. The most common serious bug in beginner apps is a query that forgets to filter by owner. Have students run the two-account test live.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 8 of 14</div><div class="sw"><section id="s08" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>A job, in steps</h2>
+<p class="lede">If step 2 fails, only step 2 runs again.</p>
+<div class="cards c4">
+<div class="card"><p class="k">TRIGGER</p><h3>Monday, 8:00</h3><p class="t">A schedule starts it. No person involved.</p></div>
+<div class="card"><p class="k">STEP 1</p><h3>Collect</h3><p class="t">Read the week’s ideas.</p></div>
+<div class="card"><p class="k">STEP 2</p><h3>Summarize</h3><p class="t">Write a paragraph.</p></div>
+<div class="card"><p class="k">STEP 3</p><h3>Save</h3><p class="t">Store it for the page.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 12. Students break step 2 on purpose and watch it retry. Then the rule: anything unattended must report failure somewhere you will see it.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 9 of 14</div><div class="sw"><section id="s09" class="alt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Three ways an agent reaches a tool</h2>
+<div class="cards c3">
+<div class="card"><p class="k">MODULE 13</p><h3>A command-line tool</h3><p class="t">Text in, text out. Use it when the service has one.</p></div>
+<div class="card"><p class="k">MODULE 14</p><h3>An MCP connector</h3><p class="t">For where your work lives: documents, email, a CRM.</p></div>
+<div class="card"><p class="k">ANY TIME</p><h3>The website</h3><p class="t">For first-time setup, and anything you want to see yourself.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Modules 13 and 14. Rule for connected services: read freely, confirm before writing, and state exactly what will change.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 10 of 14</div><div class="sw"><section id="s10" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Agent or pipeline?</h2>
+<p class="lede">Module 15 puts a model inside the student’s own app.</p>
+<div class="cards c2">
+<div class="card"><p class="k">AGENT</p><h3>You give a goal</h3><p class="t">It decides its own steps. Flexible, good for building. Harder to predict and to test.</p></div>
+<div class="card"><p class="k">PIPELINE</p><h3>You define the steps</h3><p class="t">A model does each one. Predictable, testable, cheaper. Right for work that repeats.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 15. The author’s production systems are pipelines. Use an agent to build the pipeline, and the pipeline for the repeated work. Video 6.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 11 of 14</div><div class="sw"><section id="s11" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>A real pipeline</h2>
+<div class="cards c5">
+<div class="card"><p class="k">1</p><h3>Plan</h3><p class="t">Pick the angle from verified facts.</p></div>
+<div class="card"><p class="k">2</p><h3>Write</h3><p class="t">A cheaper model drafts.</p></div>
+<div class="card"><p class="k">3</p><h3>Check</h3><p class="t">A stronger model verifies.</p></div>
+<div class="card"><p class="k">4</p><h3>Gate</h3><p class="t">Code enforces rules.</p></div>
+<div class="card"><p class="k">5</p><h3>Review</h3><p class="t">A person decides.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 15. A failed check does not delete the work. It is kept and marked for a person. Nothing reaches a real person without a click.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 12 of 14</div><div class="sw"><section id="s12" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Before generated media goes to a client</h2>
+<p class="lede">Module 16: one key, many models. Images, video, speech.</p>
+<div class="cards c4">
+<div class="card"><p class="k">RIGHTS</p><h3>Check the model’s terms</h3><p class="t">Commercial use differs by model.</p></div>
+<div class="card"><p class="k">PEOPLE</p><h3>No real people or brands</h3><p class="t">Nothing you could not license.</p></div>
+<div class="card"><p class="k">DISCLOSURE</p><h3>Follow client policy</h3><p class="t">Ask before you present it.</p></div>
+<div class="card"><p class="k">RECORDS</p><h3>Keep the receipt</h3><p class="t">Prompt, model and date, beside each asset.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 16. One key reaches image, video, speech and transcription models. Generating is easy. Being allowed to use it is a separate question.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 13 of 14</div><div class="sw"><section id="s13" class="alt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>Not everything belongs on the internet</h2>
+<p class="lede">Module 17: tools that live on the student’s own machine.</p>
+<div class="cards c4">
+<div class="card"><p class="k">1</p><h3>A script</h3><p class="t">One file, one job.</p></div>
+<div class="card"><p class="k">2</p><h3>A scheduled job</h3><p class="t">Runs by itself.</p></div>
+<div class="card"><p class="k">3</p><h3>A desktop app</h3><p class="t">Its own window and icon.</p></div>
+<div class="card"><p class="k">4</p><h3>A game</h3><p class="t">Built in a free engine.</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>Module 17. Choose local when only you will use it and the files live on your machine. Choose web when other people need it.</div></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Slide 14 of 14</div><div class="sw"><section id="s14" class="alt" data-transition="fade">
+<div class="bar"></div>
+<div class="stack">
+<h2>In class</h2>
+<div class="ask">
+<div class="row"><p class="n">1</p><p class="q">Sign up as a second user on your own live app. What do you see?</p></div>
+<div class="row"><p class="n">2</p><p class="q">Make your scheduled job fail on purpose. How did you find out?</p></div>
+<div class="row"><p class="n">3</p><p class="q">Pick one task: would you build it as an agent or as a pipeline, and why?</p></div>
+</div>
+</div>
+</section>
+</div><div class="notes"><span style="font-weight: 700">Notes: </span>These three checks are the difference between an app that looks finished and one that is.</div></div></div></div><script>function fit(){document.querySelectorAll('.sw').forEach(function(w){w.firstElementChild.style.transform='scale('+w.clientWidth/1920+')'})}addEventListener('resize',fit);addEventListener('load',fit);fit()</script>
+</body>
+</html>

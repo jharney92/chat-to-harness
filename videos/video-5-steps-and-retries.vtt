@@ -1,0 +1,57 @@
+WEBVTT
+
+1
+00:00:00.200 --> 00:00:04.032
+Some work shouldn't wait for a click. A weekly summary. A slow upload.
+
+2
+00:00:04.062 --> 00:00:05.577
+Anything that takes a while.
+
+3
+00:00:06.007 --> 00:00:09.421
+That's a background job. You describe it as steps, in order.
+
+4
+00:00:09.851 --> 00:00:16.622
+Step one, collect the week's ideas. Done. Step two, write the summary.
+
+5
+00:00:16.652 --> 00:00:19.731
+Done. Step three, save it. Done.
+
+6
+00:00:20.161 --> 00:00:23.327
+Now run it again. Step one finishes. Step two fails.
+
+7
+00:00:23.357 --> 00:00:24.864
+Maybe a service was busy.
+
+8
+00:00:25.294 --> 00:00:28.286
+Without steps, you'd start over from the top.
+
+9
+00:00:28.316 --> 00:00:32.585
+With steps, step one is already saved. Only step two runs again.
+
+10
+00:00:33.015 --> 00:00:37.258
+It waits a moment, tries again, and this time it works.
+
+11
+00:00:37.288 --> 00:00:38.735
+Step three follows.
+
+12
+00:00:39.165 --> 00:00:42.648
+One more thing. A job runs when nobody's watching.
+
+13
+00:00:42.678 --> 00:00:45.177
+So it has to tell you when it fails.
+
+14
+00:00:45.207 --> 00:00:48.269
+If it can break silently, it isn't finished.

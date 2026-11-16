@@ -1,0 +1,57 @@
+WEBVTT
+
+1
+00:00:00.200 --> 00:00:02.700
+There are two ways to get work out of a model.
+
+2
+00:00:02.730 --> 00:00:05.835
+Let's give both the same task: write this week's summary.
+
+3
+00:00:06.265 --> 00:00:10.462
+The agent gets a goal and decides its own steps. It reads. It thinks.
+
+4
+00:00:10.492 --> 00:00:12.299
+It tries something. It checks.
+
+5
+00:00:12.729 --> 00:00:16.525
+That freedom is why agents are good at building things.
+
+6
+00:00:16.555 --> 00:00:19.725
+It's also why two runs can come out different.
+
+7
+00:00:20.155 --> 00:00:24.647
+The pipeline gets steps that you chose. Plan. Write. Check.
+
+8
+00:00:24.677 --> 00:00:27.484
+Each one is a single, narrow request.
+
+9
+00:00:27.914 --> 00:00:31.683
+Every run takes the same path. You can test each step.
+
+10
+00:00:31.713 --> 00:00:35.764
+And you can use a cheaper model wherever it's good enough.
+
+11
+00:00:36.194 --> 00:00:39.660
+And when a check fails, the work isn't thrown away.
+
+12
+00:00:39.690 --> 00:00:42.333
+It's set aside for a person to look at.
+
+13
+00:00:42.763 --> 00:00:45.512
+So. Use an agent to build the pipeline.
+
+14
+00:00:45.542 --> 00:00:48.577
+Use the pipeline for the work that repeats.

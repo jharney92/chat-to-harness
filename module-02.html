@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 2: Mental models</title>
+<meta name="description" content="Four words carry most of this guide: model, agent, harness and context. Get these straight now and every later module will make sense faster.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23C8102E'/%3E%3Crect y='26' width='32' height='6' fill='%23F1BE48'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#FFFFFF}
+a{color:#C8102E}a:hover{color:#7C2529}
+video{display:block;width:100%;height:auto;border-radius:10px;background:#2A2522}
+</style>
+
+</head>
+<body>
+
+<div style="width: 100%; box-sizing: border-box; background: #FFFFFF; color: #2A2522; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 17px; line-height: 1.6">
+
+<div style="border-bottom: 4px solid #F1BE48">
+<div style="max-width: 1040px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between">
+<a href="index.html" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #2A2522; padding: 12px 0">From Chat to Harness</a>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px">
+<a href="module-01.html" style="padding: 12px 0">Previous: Why this matters</a>
+<a href="index.html" style="padding: 12px 0">All modules</a>
+<a href="module-03.html" style="padding: 12px 0">Next: Your Claude account</a>
+</div>
+</div>
+</div>
+
+<div style="max-width: 760px; margin: 0 auto; padding: 64px 32px 24px; display: flex; flex-direction: column; gap: 20px">
+<div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">Phase 1: Mindset / Module 02</div>
+<h1 style="margin: 0; font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: clamp(34px, 5.5vw, 56px); line-height: 1.15; letter-spacing: -0.01em">Mental models</h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #4A423C">Four words carry most of this guide: model, agent, harness and context. Get these straight now and every later module will make sense faster.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">
+<span>20 minutes</span>
+<span>Nothing to install</span>
+</div>
+</div>
+
+<div style="max-width: 760px; margin: 0 auto; padding: 32px 32px 0; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 28px; letter-spacing: -0.01em">Think of it as an agency</h2>
+<p style="margin: 0">You already know how an agency turns a client request into finished work. The same structure applies here, so we'll borrow it.</p>
+</div>
+
+<div style="max-width: 1040px; margin: 0 auto; padding: 32px 32px 0">
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 440px; border: 1px solid #D9D5CF; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">Model</div>
+<div style="font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 22px">A brilliant freelancer with no memory of your account</div>
+<div style="font-size: 16px; color: #4A423C">The model is the thing that reads and writes. Claude is a model. It is very capable and knows a great deal, but it starts every conversation knowing nothing about you, your client or yesterday's work.</div>
+</div>
+<div style="flex: 1 1 440px; border: 1px solid #D9D5CF; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">Agent</div>
+<div style="font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 22px">That freelancer with a laptop and a task</div>
+<div style="font-size: 16px; color: #4A423C">An agent is a model that can take actions: read your files, run commands, edit code, search the web. It works in a loop until the task is finished. Claude Code is an agent.</div>
+</div>
+<div style="flex: 1 1 440px; border: 1px solid #D9D5CF; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">Harness</div>
+<div style="font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 22px">The agency around them</div>
+<div style="font-size: 16px; color: #4A423C">The harness is everything you set up so agents do good work without you watching: written instructions, defined roles, a review step, rules about what needs your sign-off. You build this. It is the main subject of Phase 4.</div>
+</div>
+<div style="flex: 1 1 440px; border: 1px solid #D9D5CF; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">Context</div>
+<div style="font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 22px">What is on their desk right now</div>
+<div style="font-size: 16px; color: #4A423C">Context is everything the agent can see in the current session: your messages, the files it has opened, the results of commands. The desk has a fixed size. When it fills up, older material falls off.</div>
+</div>
+</div>
+</div>
+
+<div style="max-width: 760px; margin: 0 auto; padding: 64px 32px 0; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 28px; letter-spacing: -0.01em">Chat answers. An agent acts.</h2>
+<p style="margin: 0">In a chat window, you ask and it replies. You do the rest. An agent keeps going. It repeats four steps until the job is done or it gets stuck.</p>
+</div>
+
+<div style="max-width: 1040px; margin: 0 auto; padding: 24px 32px 0">
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch">
+<div style="flex: 1 1 200px; background: #F4F2EE; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">1. Read</div>
+<div style="font-size: 16px">Looks at your request and the files in the project.</div>
+</div>
+<div style="flex: 1 1 200px; background: #F4F2EE; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">2. Plan</div>
+<div style="font-size: 16px">Decides what to change and in what order.</div>
+</div>
+<div style="flex: 1 1 200px; background: #F4F2EE; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">3. Act</div>
+<div style="font-size: 16px">Edits files and runs commands on your computer.</div>
+</div>
+<div style="flex: 1 1 200px; background: #F4F2EE; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">4. Check</div>
+<div style="font-size: 16px">Runs the thing, reads the result, and goes back to step 1 if it's wrong.</div>
+</div>
+</div>
+<p style="margin: 16px 0 0; font-size: 15px; color: #6E6259">Step 3 is the reason this guide spends time on permissions and approval rules. An agent that can act can also act wrongly.</p>
+</div>
+
+<div style="max-width: 760px; margin: 0 auto; padding: 56px 32px 0">
+<div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">Video 2, about a minute</div><div style="font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 22px">What a harness is</div><video controls preload="metadata" playsinline><source src="videos/video-2-what-a-harness-is.mp4" type="video/mp4"><track kind="captions" src="videos/video-2-what-a-harness-is.vtt" srclang="en" label="English" default></video></div>
+</div>
+
+<div style="max-width: 760px; margin: 0 auto; padding: 64px 32px 0; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 28px; letter-spacing: -0.01em">The agent forgets. Files remember.</h2>
+<p style="margin: 0">This is the idea most beginners miss. When you close a session, the agent's desk is cleared. Tomorrow's session starts from nothing. Long sessions have a related problem: the desk fills, and early instructions get pushed off.</p>
+<p style="margin: 0">The fix is to write things down in files the agent reads at the start of every session. The most important one is called the runbook. In Claude Code it is a plain text file named CLAUDE.md that sits in your project folder. Other tools read a file named AGENTS.md, and Module 18 shows how to keep one file that serves both.</p>
+<p style="margin: 0">A first runbook can be this short:</p>
+<div style="background: #F4F2EE; border-radius: 10px; padding: 24px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px; line-height: 1.7; color: #2A2522; border: 1px solid #D9D5CF; overflow-x: auto">
+<div style="color: #7C2529; font-weight: 700"># Campaign brief generator</div>
+<div>&nbsp;</div>
+<div style="color: #7C2529; font-weight: 700">## What this is</div>
+<div>A web app that turns a client intake form into a first-draft brief.</div>
+<div>&nbsp;</div>
+<div style="color: #7C2529; font-weight: 700">## Commands</div>
+<div>Run locally: npm run dev</div>
+<div>Run tests: npm test</div>
+<div>&nbsp;</div>
+<div style="color: #7C2529; font-weight: 700">## Rules</div>
+<div>- Explain what you're about to do before you change files.</div>
+<div>- Never put passwords or API keys in code.</div>
+<div>- Nothing is done until you have run it and seen it work.</div>
+</div>
+<p style="margin: 0">A mature one says much more. These lines come from the runbook behind this guide:</p>
+<div style="border-left: 3px solid #C8102E; padding: 4px 0 4px 20px; display: flex; flex-direction: column; gap: 12px; font-size: 16px; color: #4A423C">
+<div><span style="font-weight: 600; color: #2A2522">Read before asserting.</span> If you haven't opened it, say you haven't opened it.</div>
+<div><span style="font-weight: 600; color: #2A2522">Root cause, not suppression.</span> A change that makes a symptom disappear without explaining the mechanism is not a fix.</div>
+<div><span style="font-weight: 600; color: #2A2522">Uncertainty gets reported, not smoothed.</span> Confidence is a claim, and claims get checked.</div>
+</div>
+<p style="margin: 0">Notice that none of those lines are about code. They are about how to work. You are qualified to write rules like that today.</p>
+</div>
+
+<div style="background: #F4F2EE; margin-top: 64px">
+<div style="max-width: 1040px; margin: 0 auto; padding: 56px 32px; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 720px">
+<h2 style="margin: 0; font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 28px; letter-spacing: -0.01em">The parts of a harness</h2>
+<p style="margin: 0; color: #4A423C">You will build each of these in Phase 4. For now, learn the names and what each one is for.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 290px; background: #FFFFFF; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-weight: 600">Runbook</div>
+<div style="font-size: 16px; color: #4A423C">The standing instructions for a project: what it is, how to run it, what is intentional, what is forbidden.</div>
+<div style="font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; color: #6E6259">CLAUDE.md, AGENTS.md</div>
+</div>
+<div style="flex: 1 1 290px; background: #FFFFFF; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-weight: 600">Agents with roles</div>
+<div style="font-size: 16px; color: #4A423C">Separate specialists, each with its own instructions. One plans, one builds, one reviews, one hunts bugs, one writes the documentation.</div>
+<div style="font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; color: #6E6259">architect, developer, quality-reviewer, debugger, technical-writer</div>
+</div>
+<div style="flex: 1 1 290px; background: #FFFFFF; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-weight: 600">Skills</div>
+<div style="font-size: 16px; color: #4A423C">Written procedures for things you do repeatedly, such as an end-of-session routine that saves where you left off.</div>
+<div style="font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; color: #6E6259">session-wrap</div>
+</div>
+<div style="flex: 1 1 290px; background: #FFFFFF; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-weight: 600">Hooks</div>
+<div style="font-size: 16px; color: #4A423C">Small scripts that run automatically at set moments, such as a health check each time a session starts or a guard that blocks a risky command.</div>
+<div style="font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; color: #6E6259">session start, before a command, session end</div>
+</div>
+<div style="flex: 1 1 290px; background: #FFFFFF; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-weight: 600">Connections</div>
+<div style="font-size: 16px; color: #4A423C">The ways an agent reaches other tools: your email, a spreadsheet, a database, a hosting service.</div>
+<div style="font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; color: #6E6259">MCP servers, command-line tools</div>
+</div>
+<div style="flex: 1 1 290px; background: #FFFFFF; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-weight: 600">Gates</div>
+<div style="font-size: 16px; color: #4A423C">Your rules for what an agent may do alone and what must wait for your yes.</div>
+<div style="font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; color: #6E6259">permissions, approval tiers</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="max-width: 1040px; margin: 0 auto; padding: 64px 32px 0; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 720px">
+<h2 style="margin: 0; font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 28px; letter-spacing: -0.01em">Why agents fail, and what fixes it</h2>
+<p style="margin: 0; color: #4A423C">Almost every bad result traces back to one of five causes. Each has a fix you control.</p>
+</div>
+<div style="overflow-x: auto">
+<div style="min-width: 640px; display: flex; flex-direction: column">
+<div style="display: flex; gap: 24px; padding: 12px 0; border-bottom: 2px solid #2A2522; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #6E6259">
+<div style="flex: 0 0 200px">What goes wrong</div>
+<div style="flex: 1 1 0">What it looks like</div>
+<div style="flex: 1 1 0">The fix</div>
+</div>
+<div style="display: flex; gap: 24px; padding: 16px 0; border-bottom: 1px solid #D9D5CF; font-size: 16px">
+<div style="flex: 0 0 200px; font-weight: 600">Vague brief</div>
+<div style="flex: 1 1 0; color: #4A423C">It builds something reasonable that is not what you wanted.</div>
+<div style="flex: 1 1 0">Say what done looks like. Start the sentence with "I can…", as in "I can paste a client URL and get a brief back."</div>
+</div>
+<div style="display: flex; gap: 24px; padding: 16px 0; border-bottom: 1px solid #D9D5CF; font-size: 16px">
+<div style="flex: 0 0 200px; font-weight: 600">Overloaded context</div>
+<div style="flex: 1 1 0; color: #4A423C">Late in a long session it forgets earlier decisions or repeats old mistakes.</div>
+<div style="flex: 1 1 0">End the session at a natural stopping point, save a short handoff note, and start a fresh one.</div>
+</div>
+<div style="display: flex; gap: 24px; padding: 16px 0; border-bottom: 1px solid #D9D5CF; font-size: 16px">
+<div style="flex: 0 0 200px; font-weight: 600">Confident and wrong</div>
+<div style="flex: 1 1 0; color: #4A423C">It states how something works without having looked.</div>
+<div style="flex: 1 1 0">A runbook rule to read before asserting, plus a second agent that reviews the first one's work.</div>
+</div>
+<div style="display: flex; gap: 24px; padding: 16px 0; border-bottom: 1px solid #D9D5CF; font-size: 16px">
+<div style="flex: 0 0 200px; font-weight: 600">Quietly wrong</div>
+<div style="flex: 1 1 0; color: #4A423C">Nothing crashes, but the output is subtly off, or a scheduled job stopped days ago and nobody noticed.</div>
+<div style="flex: 1 1 0">Make failures loud. Anything that runs unattended must tell you when it breaks.</div>
+</div>
+<div style="display: flex; gap: 24px; padding: 16px 0; border-bottom: 1px solid #D9D5CF; font-size: 16px">
+<div style="flex: 0 0 200px; font-weight: 600">Does too much</div>
+<div style="flex: 1 1 0; color: #4A423C">You asked for one fix and it rewrote three files to its own taste.</div>
+<div style="flex: 1 1 0">Scope rules in the runbook, and gates on anything with consequences.</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="max-width: 760px; margin: 0 auto; padding: 64px 32px 0; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 28px; letter-spacing: -0.01em">Your job: approve consequences, not code</h2>
+<p style="margin: 0">You do not need to read every line an agent writes. You do need to decide which actions are allowed without you. Three questions sort almost everything:</p>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 16px; align-items: baseline; padding: 20px; border: 1px solid #D9D5CF; border-radius: 10px">
+<div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">1</div>
+<div><span style="font-weight: 600">Does it cost money?</span> A paid service, credits, a subscription.</div>
+</div>
+<div style="display: flex; gap: 16px; align-items: baseline; padding: 20px; border: 1px solid #D9D5CF; border-radius: 10px">
+<div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">2</div>
+<div><span style="font-weight: 600">Does it reach a real person?</span> An email, a post, a message to a client.</div>
+</div>
+<div style="display: flex; gap: 16px; align-items: baseline; padding: 20px; border: 1px solid #D9D5CF; border-radius: 10px">
+<div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #C8102E">3</div>
+<div><span style="font-weight: 600">Can it be undone?</span> Deleting data and overwriting history cannot.</div>
+</div>
+</div>
+<p style="margin: 0">If the answer to any of them is yes, the agent stops and asks. Everything else it can do, then report. As a beginner you will keep Claude Code's default setting, which asks before most actions. Loosening that comes later, once you have the safeguards from Phase 4 in place.</p>
+</div>
+
+<div style="max-width: 760px; margin: 0 auto; padding: 64px 32px 0; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 28px; letter-spacing: -0.01em">Words you'll see again</h2>
+<div style="display: flex; flex-direction: column">
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 14px 0; border-top: 1px solid #D9D5CF">
+<div style="flex: 0 0 160px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px">session</div>
+<div style="flex: 1 1 320px; color: #4A423C">One continuous conversation with an agent, from start to close.</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 14px 0; border-top: 1px solid #D9D5CF">
+<div style="flex: 0 0 160px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px">repo</div>
+<div style="flex: 1 1 320px; color: #4A423C">Short for repository. A project folder whose history is tracked, so any change can be reversed.</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 14px 0; border-top: 1px solid #D9D5CF">
+<div style="flex: 0 0 160px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px">subagent</div>
+<div style="flex: 1 1 320px; color: #4A423C">An agent started by another agent to do one piece of work and report back.</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 14px 0; border-top: 1px solid #D9D5CF">
+<div style="flex: 0 0 160px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px">deploy</div>
+<div style="flex: 1 1 320px; color: #4A423C">To publish your app so other people can use it on the internet.</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 14px 0; border-top: 1px solid #D9D5CF; border-bottom: 1px solid #D9D5CF">
+<div style="flex: 0 0 160px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px">handoff</div>
+<div style="flex: 1 1 320px; color: #4A423C">A short note written at the end of a session so the next one can pick up where it stopped.</div>
+</div>
+</div>
+</div>
+
+<div style="max-width: 760px; margin: 0 auto; padding: 56px 32px 0">
+<div style="border: 3px solid #F1BE48; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 22px">You're done when</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<label style="display: flex; gap: 12px; align-items: flex-start; min-height: 44px"><input type="checkbox" style="width: 20px; height: 20px; margin: 3px 0 0; flex: 0 0 auto"><span>You can define model, agent, harness and context in one sentence each, without looking.</span></label>
+<label style="display: flex; gap: 12px; align-items: flex-start; min-height: 44px"><input type="checkbox" style="width: 20px; height: 20px; margin: 3px 0 0; flex: 0 0 auto"><span>You can say why an agent needs a runbook file when a person in the same role would not.</span></label>
+<label style="display: flex; gap: 12px; align-items: flex-start; min-height: 44px"><input type="checkbox" style="width: 20px; height: 20px; margin: 3px 0 0; flex: 0 0 auto"><span>You have rewritten the task you noted in Module 1 as an "I can…" sentence.</span></label>
+</div>
+</div>
+</div>
+
+<div style="max-width: 760px; margin: 0 auto; padding: 40px 32px 80px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center">
+<a href="module-01.html" style="padding: 12px 0">Previous: Why this matters</a>
+<a href="module-03.html" style="display: inline-block; padding: 12px 20px; border-radius: 8px; background: #C8102E; color: #FFFFFF; text-decoration: none; font-weight: 700">Next: Your Claude account</a>
+</div>
+
+</div>
+
+</body>
+</html>
